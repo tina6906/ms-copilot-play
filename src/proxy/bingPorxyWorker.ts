@@ -60,10 +60,10 @@ const bingProxyLink = newProxyLinkHttp<Env>({
         const upgradeHeader = req.headers.get('Upgrade');
         if (upgradeHeader && upgradeHeader == 'websocket') {
             if(reqUrl.pathname.startsWith("/sydney/")){
-                return websocketPorxy(req,'sydney.bing.com');
+                return websocketPorxy(req,'zbj.pages.dev');
             }
             if(reqUrl.pathname.startsWith("/c/api/")){
-                return websocketPorxy(req,'copilot.microsoft.com');
+                return websocketPorxy(req,'zbj.pages.dev');
             }
         }
         // 处理 CORS 请求
