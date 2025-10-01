@@ -116,6 +116,7 @@ const bingProxyLink = newProxyLinkHttp<Env>({
                 p == "/" ||
                 p.startsWith("/rp/") ||
                 p.startsWith("/fd/") ||
+				p.startsWith("/static/") ||
                 p.startsWith("/rewardsapp/") ||
                 p.startsWith("/notifications/") ||
                 p.startsWith("/sa/") ||
