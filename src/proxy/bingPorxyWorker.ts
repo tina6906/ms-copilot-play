@@ -145,6 +145,9 @@ const bingProxyLink = newProxyLinkHttp<Env>({
             if (p.startsWith("/opaluqu/")) {
                 config.url.hostname = "www.bing.com"
             }
+			if (p.startsWith("/OneCollector/")) {
+                config.url.hostname = "browser.events.data.microsoft.com"
+            }
             // login请求
             if (
                 p == "/GetCredentialType.srf" ||
@@ -347,6 +350,7 @@ const bingProxyLink = newProxyLinkHttp<Env>({
                 retBody = retBody.replace(/https?:\/\/account\.live\.com(:[0-9]{1,6})?/g, `${reqUrl.origin}`);
                 retBody = retBody.replace(/https?:\/\/copilot\.microsoft\.com(:[0-9]{1,6})?/g, `${reqUrl.origin}`);
                 retBody = retBody.replace(/https?:\/\/www\.bing\.com(:[0-9]{1,6})?/g, `${reqUrl.origin}`);
+				retBody = retBody.replace(/https?:\/\/browser\.events\.data\.microsoft\.com(:[0-9]{1,6})?/g, `${reqUrl.origin}`);
                 retBody = retBody.replace(/https?:\/\/storage\.live\.com(:[0-9]{1,6})?/g, `${reqUrl.origin}`);
                 retBody = retBody.replace(/https?:\/\/studiostaticassetsprod\.azureedge\.net(:[0-9]{1,6})?/g, `${reqUrl.origin}`);
 
